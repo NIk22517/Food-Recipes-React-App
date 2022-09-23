@@ -1,34 +1,33 @@
-import { FaPizzaSlice, FaHamburger } from 'react-icons/fa';
-import {GiNoodles, GiChopsticks} from 'react-icons/gi';
-import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-
+import { FaPizzaSlice, FaHamburger } from "react-icons/fa";
+import { GiNoodles, GiChopsticks } from "react-icons/gi";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const Category = () => {
   return (
     <List>
-        <SLink to={'/cuisine/Italian'}>
-            <FaPizzaSlice />
-            <h4>Italian</h4>
-        </SLink>
+      <SLink to={"/cuisine/Italian"}>
+        <FaPizzaSlice />
+        <h4>Italian</h4>
+      </SLink>
 
-        <SLink to={'/cuisine/American'}>
-            <FaHamburger />
-            <h4>American</h4>
-        </SLink>
+      <SLink to={"/cuisine/American"}>
+        <FaHamburger />
+        <h4>American</h4>
+      </SLink>
 
-        <SLink to={'/cuisine/Thai'}>
-            <GiNoodles />
-            <h4>Thai</h4>
-        </SLink>
+      <SLink to={"/cuisine/Thai"}>
+        <GiNoodles />
+        <h4>Thai</h4>
+      </SLink>
 
-        <SLink to={'/cuisine/Japanese'}>
-            <GiChopsticks />
-            <h4>Japanese</h4>
-        </SLink>
+      <SLink to={"/cuisine/Indian"}>
+        <GiChopsticks />
+        <h4>Indian</h4>
+      </SLink>
     </List>
-  )
-}
+  );
+};
 
 export default Category;
 
@@ -36,7 +35,6 @@ const List = styled.div`
   display: flex;
   justify-content: center;
   margin: 2rem 0rem;
-
 `;
 
 const SLink = styled(NavLink)`
@@ -53,22 +51,26 @@ const SLink = styled(NavLink)`
   cursor: pointer;
   transform: scale(0.8);
 
-  h4{
+  h4 {
     color: white;
     font-size: 0.8rem;
   }
-  svg{
+  svg {
     color: white;
     font-size: 1.5rem;
   }
-  &.active{
+  &.active {
     background: linear-gradient(to right, #f27121, #e94057);
 
-    svg{
+    svg {
       color: white;
     }
-    h4{
+    h4 {
       color: white;
     }
+  }
+
+  @media (max-width: 800px) {
+    margin-right: 0rem;
   }
 `;
