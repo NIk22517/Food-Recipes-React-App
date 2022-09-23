@@ -35,6 +35,12 @@ const Veggie = () => {
           drag: "free",
           gap: "5rem",
           breakpoints: {
+            1100: {
+              perPage: 2,
+              arrows: false,
+              pagination: false,
+              drag: "free",
+            },
             640: {
               perPage: 1,
               arrows: false,
